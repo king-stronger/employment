@@ -201,22 +201,22 @@ button {
 }
 /****************************** HEADER *******************************/
 
-/****************************** SEARCH FORM *******************************/
-.search-form {
+/****************************** FILTER FORM *******************************/
+.filter-form {
     padding: 2rem 1rem;
     background-color: white;
     box-shadow: 0 0 2px 1px #fafafa;
 }
 
-.search-form-header {
+.filter-form-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search-form select,
-.search-form input:is(:not([type="checkbox"], [type="radio"], [type="range"])),
-.search-form textarea
+.filter-form select,
+.filter-form input:is(:not([type="checkbox"], [type="radio"], [type="range"])),
+.filter-form textarea
 {
     border: none;
     padding: .5rem;
@@ -235,7 +235,7 @@ button {
     gap: 1rem;
     display: flex;
 }
-/****************************** SEARCH FORM *******************************/
+/****************************** FILTER FORM *******************************/
 
 /****************************** PROFILE *******************************/
 .profile article {
