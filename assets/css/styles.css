@@ -243,6 +243,43 @@ button {
 }
 /****************************** FILTER FORM *******************************/
 
+
+/****************************** MAIN SECTION *******************************/
+.main-section > article {
+    padding: 2rem 3rem;
+    border-radius: .5rem;
+    background-color: var(--clr-background-alt);
+}
+
+.main-section > article :is(h2, h3, p) {
+    color: white;
+}
+
+.search-article {
+    gap: 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.search-form {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.search-form input {
+    flex-grow: 1;
+
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: white;
+    outline: 1px solid #d5d5d5;
+}
+/****************************** MAIN SECTION *******************************/
+
+
 /****************************** PROFILE *******************************/
 .profile article {
     margin-bottom: 3rem;
