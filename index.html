@@ -17,7 +17,7 @@
                 <nav class="nav" id="nav">
                     <ul class="menu" id="menu">
                         <li class="nav-item close-menu" id="close-menu">
-                            <a href="#" class="nav-link bx bx-x"></a>
+                            <button class="nav-link bx bx-x" aria-label="close menu" aria-labelledby="menu"></button>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">Trouver des projets</a>
@@ -36,7 +36,7 @@
     
                 <div>
                     <button class="button btn-primary">Rejoindre maintenant</button>
-                    <button class="button-menu" id="button-menu" aria-label="Bouton menu" aria-labelledby="menu">
+                    <button class="button-menu" id="button-menu" aria-label="button menu" aria-labelledby="menu">
                         <i class='bx bx-menu-alt-right'></i>
                     </button>
                 </div>
@@ -44,7 +44,7 @@
         </header>
     
         <main class="main">
-            <form class="filter-form flow-lg">
+            <form class="filter-form flow-lg" data-aos="slide-right">
                 <div class="filter-form-header">
                     <h2 class="text-md">Filtrer</h2>
                     <button class="link" type="reset">Réinitialiser tout</button>
@@ -101,7 +101,7 @@
             </form>
     
             <section class="main-section">
-                <article class="search-article">
+                <article class="search-article" data-aos="flip-down">
                     <div class="search-article-img-container">
                         <img src="assets/img/service3.webp" alt="Image de l'article de recherche" class="search-article-img">
                     </div>
@@ -117,10 +117,10 @@
                     </div>
                 </article>
     
-                <article class="job-article flow-lg">
+                <article class="job-article flow-lg" data-aos="slide-up">
                     <div class="article-header">
                         <div class="company-img-container">
-                            <img src="assets/img/company.webp" alt="" class="company-img">
+                            <img src="assets/img/company.webp" loading="lazy" alt="Image alt" class="company-img">
                         </div>
                         <div class="job-general-info flow-sm">
                             <h2 class="text-md">Développeur Fullstack</h2>
@@ -131,7 +131,7 @@
                             </ul>
                             <span class="text-xs">Bamako, Mali</span>
                         </div>
-                        <button class="button btn-secondary">
+                        <button class="button btn-secondary" aria-label="pin the job">
                             <i class='bx bx-pin'></i>
                         </button>
                     </div>
@@ -156,7 +156,7 @@
                 <article class="job-article flow-lg">
                     <div class="article-header">
                         <div class="company-img-container">
-                            <img src="assets/img/company.webp" alt="" class="company-img">
+                            <img src="assets/img/company.webp" loading="lazy" alt="Image alt" class="company-img">
                         </div>
                         <div class="job-general-info flow-sm">
                             <h2 class="text-md">Développeur Frontend & Mobile</h2>
@@ -167,7 +167,7 @@
                             </ul>
                             <span class="text-xs">Bamako, Mali</span>
                         </div>
-                        <button class="button btn-secondary">
+                        <button class="button btn-secondary" aria-label="pin the job">
                             <i class='bx bx-pin'></i>
                         </button>
                     </div>
@@ -190,7 +190,7 @@
                 <article class="job-article flow-lg">
                     <div class="article-header">
                         <div class="company-img-container">
-                            <img src="assets/img/company.webp" alt="" class="company-img">
+                            <img src="assets/img/company.webp" loading="lazy" alt="Image alt" class="company-img">
                         </div>
                         <div class="job-general-info flow-sm">
                             <h2 class="text-md">Designer Graphique</h2>
@@ -201,7 +201,7 @@
                             </ul>
                             <span class="text-xs">Bamako, Mali</span>
                         </div>
-                        <button class="button btn-secondary">
+                        <button class="button btn-secondary" aria-label="pin the job">
                             <i class='bx bx-pin'></i>
                         </button>
                     </div>
@@ -222,10 +222,10 @@
                 </article>
             </section>
     
-            <section class="profile">
+            <section class="profile" data-aos="slide-left">
                 <article class="profile-general">
                     <div class="profile-img-container">
-                        <img src="assets/img/girl2.jpg" alt="Belle fille noire" class="profile-img">
+                        <img src="assets/img/girl2.webp" alt="Belle fille noire" class="profile-img">
                     </div>
                     <h2 class="text-md text-center">John Cena</h2>
                     <ul>
