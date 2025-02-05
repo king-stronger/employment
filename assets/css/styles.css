@@ -408,6 +408,10 @@ button {
 }
 
 @media (width < 1200px ){
+    .menu {
+        gap: 1rem;
+    }
+
     .main {
         grid-template-columns: 1fr;
     }
