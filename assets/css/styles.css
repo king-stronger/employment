@@ -1,0 +1,140 @@
+:root {
+    --flow: 1rem;
+    
+    --clr-text: #1c1200;
+    --clr-background: #ffe1ad;
+    --clr-primary: #feb114;
+    --clr-secondary: #76f1bc;
+    --clr-accent: #4bceed;
+
+}
+
+/****************************** RESET CSS *******************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100svh;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+p, span, li {
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img, video, picture, svg {
+    display: block;
+    max-width: 100%;
+    border-radius: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+}
+/****************************** RESET CSS *******************************/
+
+
+/****************************** REUSABLE CSS *******************************/
+    /****************************** STRUCTURE *******************************/
+    .flow > * + * {
+        display: block;
+        margin-top: var(--flow);
+    }
+
+    .flow-lg > * + * {
+        display: block;
+        margin-top: calc(var(--flow) * 2);
+    }
+
+    .flow-sm > * + * {
+        display: block;
+        margin-top: calc(var(--flow) / 2);
+    }
+    /****************************** STRUCTURE *******************************/
+
+
+    /****************************** TYPOGRAPHY *******************************/
+    .text-xl {
+        font-size: 2.3rem;
+    }
+
+    .text-lg {
+        font-size: 1.8rem;
+    }
+
+    .text-md {
+        font-size: 1.3rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .text-sm {
+        font-size: 0.875rem;
+    }
+
+    .text-xs {
+        font-size: 0.75rem;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-inline: auto;
+    }
+    /****************************** TYPOGRAPHY *******************************/
+
+    /****************************** UTILITIES *******************************/
+    .button {
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        background: var(--clr-primary);
+    }
+
+    .button:hover {
+        scale: 1.1;
+        background: var(--clr-accent);
+        box-shadow: 0 0 5px 0px var(--clr-secondary);
+    }
+
+    .bx {
+        font-size: 1.5rem;
+    }
+
+    .link {
+        text-decoration: none;
+        color: var(--clr-text);
+    }
+    
+    .link:hover {
+        scale: 1.3;
+        transform-origin: left;
+        color: var(--clr-accent);
+    }
+    /****************************** UTILITIES *******************************/
+
+/****************************** REUSABLE CSS *******************************/
