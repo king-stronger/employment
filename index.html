@@ -42,6 +42,64 @@
                 </div>
             </div>
         </header>
+
+        <main class="main">
+            <form class="search-form flow-lg">
+                <div class="search-form-header">
+                    <h2 class="text-md">Filter</h2>
+                    <button class="link" type="reset">Clear all</button>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-md" for="location">Locations</label>
+                    <select name="location" id="location">
+                        <option value="bamako">Bamako</option>
+                        <option value="sikasso">Sikasso</option>
+                        <option value="kayes">Kayes</option>
+                        <option value="koulikoro">Koulikoro</option>
+                        <option value="koutiala">Koutiala</option>
+                        <option value="mopti">Mopti</option>
+                        <option value="segou">Segou</option>
+                        <option value="tombouctour">Tombouctour</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h2 class="text-md">Job Type</h2>
+                    <label><input type="checkbox" name="fulltime"> Fulltime</label>
+                    <label><input type="checkbox" name="part-time"> Part-time</label>
+                    <label><input type="checkbox" name="remote"> Remote</label>
+                </div>
+
+                <div class="form-group">
+                    <h2 class="text-md">Experience Level</h2>
+                    <label><input type="checkbox" name="entry-level"> Entry Level</label>
+                    <label><input type="checkbox" name="intermediate"> intermediate</label>
+                    <label><input type="checkbox" name="expert"> Expert</label>
+                </div>
+
+                <div class="form-group">
+                    <h2 class="text-md">Expected Salary</h2>
+                    <label><input type="radio" name="salary"> Under 1000$</label>
+                    <label><input type="radio" name="salary"> 1000$ - 10000$</label>
+                    <label><input type="radio" name="salary"> My own preference</label>
+                    <div>
+                        <input type="range" min="10000" max="100000" value="15000" step="5000" name="salary-range" id="salary-range">
+                        <span id="display-salary" class="display-salary">10000$</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h2 class="text-md">Job Specialties</h2>
+                    <label><input type="checkbox" name="developer"> Developer</label>
+                    <label><input type="checkbox" name="designer"> Designer</label>
+                    <label><input type="checkbox" name="manager"> Manager</label>
+                    <label><input type="checkbox" name="analyst"> Analyst</label>
+                    <label><input type="checkbox" name="consultant"> Consultant</label>
+                    <label><input type="checkbox" name="accountant"> Accountant</label>
+                </div>
+            </form>
+        </main>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -61,6 +119,13 @@
 
         closeButton.addEventListener('click', () => {
             menu.classList.remove("show");
+        });
+
+        const salaryRange = document.getElementById("salary-range");
+        const displaySalary = document.getElementById('display-salary');
+
+        salaryRange.addEventListener("change", (e) => {
+            displaySalary.textContent = e.target.value + "$";
         });
     </script>
 </body>
