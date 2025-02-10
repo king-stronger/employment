@@ -1,15 +1,18 @@
 :root {
     --flow: 1rem;
     
+    /***** Color variables *****/
     --clr-text: #545454;
+    --clr-dark: black;
+    --clr-light: white;
     --clr-title: #1c1200;
-    --clr-accent: #4bceed;
-    --clr-primary: #dc143c;
-    --clr-secondary: #76f1bc;
-    --clr-background: #f5f5f5;
-    --clr-background-alt: crimson;
+    --clr-accent: #ffbf00ff;
+    --clr-primary: #dc143cff;
+    --clr-container: #2b303aff;
+    --clr-background: #eee5e9ff;
+    --clr-container-alt: #67597aff;
 
-    /***** Typography variables *****/
+    /***** Font sizes variables *****/
     --fs-100: clamp(0.6944rem, 0.6856rem + 0.0444vw, 0.72rem);
     --fs-200: clamp(0.8333rem, 0.8101rem + 0.1159vw, 0.9rem);
     --fs-300: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
@@ -98,6 +101,7 @@ button {
     }
 
     .text-brand {
+        color: var(--clr-light);
         font-size: var(--fs-500);
     }
 
@@ -135,17 +139,17 @@ button {
     
     .btn-secondary {
         color: var(--clr-primary);
-        background-color: white;
+        background-color: var(--clr-light);
     }
     
     .btn-primary {
-        color: white;
+        color: var(--clr-light);
         background-color: var(--clr-primary);
     }
 
     .button:hover {
         scale: 1.1;
-        color: white;
+        color: var(--clr-dark);
         background-color: var(--clr-accent);
         box-shadow: 0 0 5px 0px var(--clr-secondary);
     }
@@ -157,11 +161,9 @@ button {
     .link {
         text-decoration: none;
         color: var(--clr-title);
-        transform-origin: left;
     }
     
     .link:hover {
-        scale: 1.2;
         color: var(--clr-accent);
     }
     /****************************** UTILITIES *******************************/
@@ -190,8 +192,8 @@ button {
     z-index: 100;
     position: sticky;
     inset: 0 0 auto 0;
-    background-color: white;
     box-shadow: 0 0 2px 1px lightgray;
+    background-color: var(--clr-container);
 }
 
 .header .container {
@@ -215,34 +217,35 @@ button {
     align-items: center;
 }
 
-.nav-item {
-    transform-origin: left;
-}
-
-.nav-item > * {
+.nav-item :is(.nav-link, .bx), .button-menu, .close-menu, .button-login span {
     font-size: var(--fs-300);
-    color: var(--clr-title);
+    color: var(--clr-light);
 }
 
 .nav-item > .bx {
     display: none;
 }
 
-.nav-item:hover > *, .close-menu:hover button {
+.button-login:hover span {
+    color: var(--clr-dark);
+}
+
+.nav-item:hover > *, .close-menu:hover, .button-menu:hover {
     scale: 1.2;
     color: var(--clr-accent);
 }
 
-.button-menu, .close-menu {
+.button-menu, .close-menu, .button-login .bx {
     display: none;
 }
 /****************************** HEADER *******************************/
 
 /****************************** FILTER FORM *******************************/
 .filter-form {
+    border-radius: .5rem;
     padding: 2rem 1.5rem;
-    background-color: white;
-    box-shadow: 0 0 2px 1px #fafafa;
+    background-color: var(--clr-light);
+    box-shadow: 0 0 2px 1px var(--clr-light);
 }
 
 .filter-form-header {
@@ -251,10 +254,13 @@ button {
     justify-content: space-between;
 }
 
-.filter-form label {
-    color: var(--clr-text);
+.filter-form h2 {
+    color: var(--clr-dark);
 }
 
+.filter-form label{
+    color: var(--clr-text);
+}
 
 .filter-form select,
 .filter-form input:is(:not([type="checkbox"], [type="radio"], [type="range"])),
@@ -263,7 +269,7 @@ button {
     border: none;
     padding: .5rem;
     border-radius: .5rem;
-    background-color: white;
+    background-color: var(--clr-light);
     outline: 1px solid #d5d5d5;
 }
 
@@ -288,7 +294,7 @@ button {
 }
 
 .main-section > .search-article :is(h2, h3, p) {
-    color: white;
+    color: var(--clr-light);
 }
 
 .main-section {
@@ -300,7 +306,7 @@ button {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1.5fr;
-    background-color: var(--clr-background-alt);
+    background-color: var(--clr-container-alt);
 }
 
 .search-form {
@@ -316,11 +322,11 @@ button {
     outline: none;
     padding: .5rem;
     border-radius: .5rem;
-    background-color: white;
+    background-color: var(--clr-light);
 }
 
 .job-article {
-    background-color: white;
+    background-color: var(--clr-light);
 }
 
 .company-img-container {
@@ -400,8 +406,8 @@ button {
     margin-bottom: 3rem;
     border-radius: .5rem;
     padding: 2rem 1.5rem;
-    background-color: white;
-    box-shadow: 0 0 2px 1px #fafafa;
+    background-color: var(--clr-light);
+    box-shadow: 0 0 2px 1px var(--clr-light);
 }
 
 .profile-general {
@@ -480,8 +486,8 @@ button {
         position: fixed;
         inset: auto 0 0 0;
         translate: 0 110%;
-        background: white;
         box-shadow: 0 0 3px lightgray;
+        background: var(--clr-container);
         transition: translate 400ms ease;
     }
 
@@ -493,7 +499,17 @@ button {
         font-size: 1.5rem;
     }
 
-    .nav-item > * {
+    
+
+    .button-login span {
+        display: none;
+    }
+
+    .button-login .bx {
+        display: block;
+    }
+
+    .nav-item :is(.nav-link, .bx) {
         text-align: center;
         font-size: var(--fs-200);
     }
@@ -504,7 +520,11 @@ button {
         display: grid;
         place-items: center;
         border-radius: .5rem;
-        outline: 1px solid #d9d9d9;
+        outline: 1px solid var(--clr-light);
+    }
+    
+    .nav-item:hover {
+        outline: 1px solid var(--clr-accent);
     }
 
     .nav-item > .bx {
