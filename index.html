@@ -65,18 +65,16 @@
     
                 <div class="form-group">
                     <h2 class="text" for="location">Lieu</h2>
-                    <label for="location">
-                        <select name="location" id="location">
-                            <option value="bamako">Bamako</option>
-                            <option value="sikasso">Sikasso</option>
-                            <option value="kayes">Kayes</option>
-                            <option value="koulikoro">Koulikoro</option>
-                            <option value="koutiala">Koutiala</option>
-                            <option value="mopti">Mopti</option>
-                            <option value="segou">Ségou</option>
-                            <option value="tombouctour">Tombouctou</option>
-                        </select>
-                    </label>
+                    <select name="location" id="location" aria-label="salary-range">
+                        <option value="bamako">Bamako</option>
+                        <option value="sikasso">Sikasso</option>
+                        <option value="kayes">Kayes</option>
+                        <option value="koulikoro">Koulikoro</option>
+                        <option value="koutiala">Koutiala</option>
+                        <option value="mopti">Mopti</option>
+                        <option value="segou">Ségou</option>
+                        <option value="tombouctour">Tombouctou</option>
+                    </select>
                 </div>
     
                 <div class="form-group">
@@ -99,9 +97,7 @@
                     <label class="text-sm"><input type="radio" name="salary"> 1000$ - 10000$</label>
                     <label class="text-sm"><input type="radio" name="salary"> Ma propre préférence</label>
                     <div>
-                        <label for="salary-range">
-                            <input type="range" min="10000" max="100000" value="15000" step="5000" name="salary-range" id="salary-range">
-                        </label>
+                        <input type="range" min="10000" max="100000" value="15000" step="5000" name="salary-range" id="salary-range" aria-label="salary-range">
                         <span id="display-salary" class="display-salary">10000$</span>
                     </div>
                 </div>
