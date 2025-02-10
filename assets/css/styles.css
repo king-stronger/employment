@@ -31,7 +31,11 @@
 }
 
 html {
+    font-style: normal;
     scroll-behavior: smooth;
+    font-optical-sizing: auto;
+    font-family: "Open Sans", serif;
+    font-variation-settings: "wdth" 100;
 }
 
 body {
