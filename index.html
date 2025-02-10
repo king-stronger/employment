@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employment</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
@@ -40,7 +45,7 @@
                 </nav>
     
                 <div>
-                    <button class="button button-login btn-primary">
+                    <button class="button button-login btn-primary" aria-label="login">
                         <span>Rejoindre</span>
                         <i class='bx bx-log-in'></i>
                     </button>
@@ -60,16 +65,18 @@
     
                 <div class="form-group">
                     <h2 class="text" for="location">Lieu</h2>
-                    <select name="location" id="location">
-                        <option value="bamako">Bamako</option>
-                        <option value="sikasso">Sikasso</option>
-                        <option value="kayes">Kayes</option>
-                        <option value="koulikoro">Koulikoro</option>
-                        <option value="koutiala">Koutiala</option>
-                        <option value="mopti">Mopti</option>
-                        <option value="segou">Ségou</option>
-                        <option value="tombouctour">Tombouctou</option>
-                    </select>
+                    <label for="location">
+                        <select name="location" id="location">
+                            <option value="bamako">Bamako</option>
+                            <option value="sikasso">Sikasso</option>
+                            <option value="kayes">Kayes</option>
+                            <option value="koulikoro">Koulikoro</option>
+                            <option value="koutiala">Koutiala</option>
+                            <option value="mopti">Mopti</option>
+                            <option value="segou">Ségou</option>
+                            <option value="tombouctour">Tombouctou</option>
+                        </select>
+                    </label>
                 </div>
     
                 <div class="form-group">
@@ -92,7 +99,9 @@
                     <label class="text-sm"><input type="radio" name="salary"> 1000$ - 10000$</label>
                     <label class="text-sm"><input type="radio" name="salary"> Ma propre préférence</label>
                     <div>
-                        <input type="range" min="10000" max="100000" value="15000" step="5000" name="salary-range" id="salary-range">
+                        <label for="salary-range">
+                            <input type="range" min="10000" max="100000" value="15000" step="5000" name="salary-range" id="salary-range">
+                        </label>
                         <span id="display-salary" class="display-salary">10000$</span>
                     </div>
                 </div>
