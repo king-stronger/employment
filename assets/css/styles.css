@@ -49,6 +49,7 @@ h1, h2, h3 {
 
 p, span, li {
     max-width: 65ch;
+    line-height: 1.6;
     text-wrap: pretty;
     color: var(--clr-text);
 }
@@ -158,9 +159,22 @@ button {
         box-shadow: 0 0 5px 0px var(--clr-secondary);
     }
 
-    .bx {
+    .icon-sm {
+        font-size: var(--fs-200);
+    }
+
+    .icon {
         font-size: var(--fs-300);
     }
+
+    .icon-md {
+        font-size: var(--fs-500);
+    }
+
+    .icon-lg {
+        font-size: var(--fs-500);
+    }
+
 
     .link {
         text-decoration: none;
@@ -575,6 +589,18 @@ button {
 
     .company-img-container {
         width: 35%;
+    }
+
+    .job-general-info ul {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .job-general-info li + li::before {
+        content: "|";
+        margin-right: 0.25rem;
     }
     
     .article-footer {
